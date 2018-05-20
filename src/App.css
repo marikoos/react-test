@@ -1,0 +1,124 @@
+.App {
+  height: 100vh;
+  background: #13222a;
+  background: -moz-linear-gradient(top, #13222a 0%, #122028 5%, #314254 45%, #0c0d12 100%);
+  background: -webkit-linear-gradient(top, #13222a 0%, #122028 5%, #314254 45%, #0c0d12 100%);
+  background: linear-gradient(to bottom, #13222a 0%, #122028 5%, #314254 45%, #0c0d12 100%);
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden; }
+
+h2, h3 {
+  font-size: 16px; }
+
+h3 {
+  color: #131214;
+  font-weight: 700; }
+
+p {
+  font-size: 13px; }
+
+header, nav {
+  position: fixed; }
+
+nav {
+  transition: opacity 0.6s cubic-bezier(0.72, 0.19, 0.54, 0.97);
+  padding: 20px;
+  opacity: 0; }
+  nav.selected {
+    opacity: 1; }
+    nav.selected .nav-items {
+      margin: 70px 0;
+      height: 250px; }
+  nav .nav-items {
+    transition: all 0.6s cubic-bezier(0.37, 0.7, 0.59, 1.01);
+    margin: 30px 0;
+    height: 230px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  nav .nav-item {
+    cursor: pointer;
+    color: #d9e5e9;
+    border: 1px solid #d9e5e9;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    display: block; }
+    nav .nav-item i {
+      font-size: 30px;
+      line-height: 70px; }
+
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(50, 130, 200, 0.7);
+  padding: 20px 0;
+  z-index: 99; }
+  header h2, header .hamburger {
+    color: white; }
+  header .hamburger {
+    font-size: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 16px; }
+    header .hamburger:hover {
+      text-shadow: 0px 0px 12px white; }
+
+.main-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  transition: all .2s ease;
+  z-index: 999;
+  border-radius: 0px; }
+  .main-container.selected {
+    border-radius: 8px;
+    transform: translateX(100px) scale(0.95);
+    z-index: 9999; }
+    .main-container.selected .chat {
+      pointer-events: none; }
+
+.chat {
+  position: relative;
+  padding: 20px; }
+
+.chat:not(:last-child):after {
+  position: absolute;
+  content: "";
+  width: 98%;
+  left: 1%;
+  bottom: 0;
+  height: 1px;
+  background: #c0bfc0; }
+
+.avatar, .info {
+  display: inline-block;
+  vertical-align: middle; }
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%; }
+
+.info {
+  margin-left: 15px;
+  position: relative; }
+
+.msg {
+  color: #747374;
+  margin: 7px 0; }
+
+.time {
+  color: #c0bfc0; }
+
+/*# sourceMappingURL=App.css.map */
