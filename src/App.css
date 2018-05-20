@@ -112,7 +112,8 @@ header {
 
 .info {
   margin-left: 15px;
-  position: relative; }
+  position: relative;
+  width: 60%; }
 
 .msg {
   color: #747374;
